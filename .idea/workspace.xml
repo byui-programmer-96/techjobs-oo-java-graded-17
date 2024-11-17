@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="more fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/JobField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/JobField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/lynnw/OneDrive/Documents/LaunchCode-Work/Assignment 2",
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -231,11 +231,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.JobTest" />
       <item itemvalue="Gradle.TestTaskFive" />
       <item itemvalue="Gradle.TestTaskSix" />
       <item itemvalue="Gradle.TestTaskTwo" />
       <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
-      <item itemvalue="Gradle.JobTest" />
       <item itemvalue="JUnit.JobTest" />
     </list>
     <recent_temporary>
