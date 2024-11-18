@@ -10,6 +10,10 @@ public abstract class JobField {
         this.id = idCounter++;
     }
 
+    public JobField() {
+        this("Default Value");
+    }
+
     public String getValue() {
         return value;
     }
