@@ -1,24 +1,30 @@
 package org.launchcode.techjobs.oo;
 
 public abstract class JobField {
-    private static int idCounter = 0;
+    private static int nextId = 1;
     private final int id;
-    private final String value;
-
-    public JobField(String value) {
-        this.value = value;
-        this.id = idCounter++;
-    }
+    private String value;
 
     public JobField() {
-        this("Default Value");
+        this.id = nextId;
+        nextId++;
+    }
+
+    public JobField(String value) {
+        this();
+        this.value = value;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getValue() {
         return value;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString() {
+        return value;
     }
 }

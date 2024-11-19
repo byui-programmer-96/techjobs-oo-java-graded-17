@@ -6,8 +6,4 @@ public class Location extends JobField {
         super(value);
     }
 
-    public int getId() {
-        return super.getId();
-    }
-
 }
