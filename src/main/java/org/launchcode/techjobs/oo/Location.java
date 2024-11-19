@@ -6,8 +6,8 @@ public class Location extends JobField {
         super(value);
     }
 
-    @Override
-    public String toString() {
-        return this.getValue();
+    public int getId() {
+        return super.getId();
     }
+
 }
