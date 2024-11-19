@@ -18,4 +18,3 @@ public class PositionType extends JobField {
         return this.getId() == other.getId();
     }
 }
-
