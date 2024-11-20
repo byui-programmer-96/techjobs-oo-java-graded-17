@@ -1,9 +1,16 @@
 package org.launchcode.techjobs.oo;
 
-public abstract class JobField {
-    private final int id;
+public class JobField {
+
     private static int nextId = 1;
-    private final String value;
+    private final int id;
+    private String value;
+
+    public JobField() {
+        this.id = nextId;
+        nextId++;
+        this.value = "";
+    }
 
     public JobField(String value) {
         this.id = nextId;
@@ -11,15 +18,16 @@ public abstract class JobField {
         this.value = value;
     }
 
-    public JobField() {
-        this("Default Value");
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getValue() {
-        return value;
-    }
 }

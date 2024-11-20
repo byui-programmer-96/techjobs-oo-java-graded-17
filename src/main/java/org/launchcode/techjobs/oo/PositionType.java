@@ -1,33 +1,55 @@
 package org.launchcode.techjobs.oo;
 
-import java.util.logging.Logger;
+import java.util.Objects;
 
 public class PositionType extends JobField {
 
-    private static final Logger logger = Logger.getLogger(PositionType.class.getName());
+    private int id;
+    private static int nextId = 1;
+    private String value;
 
-    private final int id;
+    public PositionType() {
+        super ("");
+        id = nextId;
+        nextId++;
+    }
 
-    public PositionType(String value, int id) {
-        super(value);
-        this.id = id;
-        logger.info("PositionType created with id: " + id);
+    public PositionType(String value) {
+        this();
+        this.value = value;
     }
-    @Override
-    public String toString() {
-        return this.getValue();
-    }
-    @Override
-    public int hashCode() {
-        return Integer.hashCode(this.getId());
-    }
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (!(obj instanceof PositionType other)) return false;
-        return this.getId() == other.getId();
-    }
+
+
+    // Getters and Setters:
+
     public int getId() {
         return id;
     }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof PositionType)) return false;
+        PositionType that = (PositionType) o;
+        return getId() == that.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getValue());
+    }
+
+    @Override
+    public String toString() {
+        return value;
+    }
+
 }

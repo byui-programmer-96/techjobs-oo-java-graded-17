@@ -13,8 +13,8 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), 
-                         new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         assertTrue(job.getName() instanceof String);
         assertTrue(job.getEmployer() instanceof Employer);
@@ -31,18 +31,18 @@ public class JobTest {
 
     @Test
     public void testJobsForEquality() {
-        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), 
-                          new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        Job job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), 
-                          new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertFalse(job1.equals(job2));
     }
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
-        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), 
-            new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
         String jobString = job.toString();
         assertEquals(System.lineSeparator(), jobString.substring(0, System.lineSeparator().length()));
         assertEquals(System.lineSeparator(), jobString.substring(jobString.length() - System.lineSeparator().length()));
@@ -50,8 +50,8 @@ public class JobTest {
 
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
-        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), 
-            new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         String expected = System.lineSeparator() +
                 "ID: " + job.getId() + System.lineSeparator() +
@@ -66,8 +66,8 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField() {
-        Job job = new Job("Product tester", new Employer(""), new Location("Desert"), 
-            new PositionType("Quality control"), new CoreCompetency(""));
+        Job job = new Job("Product tester", new Employer(""), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency(""));
 
         String expected = System.lineSeparator() +
                 "ID: " + job.getId() + System.lineSeparator() +
